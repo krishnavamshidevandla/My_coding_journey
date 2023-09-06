@@ -25,6 +25,8 @@ i'th element should be greater than j'th element in right array. Continue the pr
     Time complexity  = O(NLogN)
     Space complexity = O(N)
 """
+## Solution ##
+
 def inversionCount(arr, n):
         count = 0
         if (len(arr)>1):
