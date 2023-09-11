@@ -30,6 +30,4 @@ def leaders(A, N):
             continue
     ans.sort(reverse=True)
     return ans
-print(leaders([1, 2, 3, 4, 0], 5)
-      
- 
+print(leaders([1, 2, 3, 4, 0], 5))
