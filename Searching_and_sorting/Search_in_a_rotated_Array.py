@@ -31,19 +31,19 @@ same.
 """
 ## Solution ##
 
-  def search( A : list, l : int, h : int, key : int):
-      while l <= h:
-          mid = (l+h)//2
-          if A[mid] == key:
-              return mid
-          if A[l] <= A[mid]:
-              if key >= A[l] and key < A[mid]:
-                  h = mid -1
-              else:
-                  l = mid +1
+def search(A, l, h, n):
+  while l <= h:
+      mid = (l+h)//2
+      if A[mid] == key:
+          return mid
+      if A[l] <= A[mid]:
+          if key >= A[l] and key < A[mid]:
+              h = mid -1
           else:
-              if key <= A[h] and key > A[mid]:
-                  l = mid +1
-              else:
-                  h = mid -1
-      return -1
+              l = mid +1
+      else:
+          if key <= A[h] and key > A[mid]:
+              l = mid +1
+          else:
+              h = mid -1
+  return -1
