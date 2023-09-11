@@ -28,31 +28,31 @@ i'th element should be greater than j'th element in right array. Continue the pr
 ## Solution ##
 
 def inversionCount(arr, n):
-        count = 0
-        if (len(arr)>1):
-            m = (len(arr))//2
-            l = arr[:m]
-            r = arr[m:]
-            count += inversionCount(l, len(l))
-            count += inversionCount(r, len(r))
-            
-            i=j=k=0
-            while (i <len(l) and j < len(r)):
-                if l[i] > r[j]:
-                    arr[k] = r[j]
-                    count += len(l) - i
-                    j += 1
-                else:
-                    arr[k] = l[i]
-                    i += 1
-                k +=1
-            while i < len(l):
-                arr[k] = l[i]
-                k+=1
-                i+=1
-            while j < len(r):
+    count = 0
+    if (len(arr)>1):
+        m = (len(arr))//2
+        l = arr[:m]
+        r = arr[m:]
+        count += inversionCount(l, len(l))
+        count += inversionCount(r, len(r))
+        
+        i=j=k=0
+        while (i <len(l) and j < len(r)):
+            if l[i] > r[j]:
                 arr[k] = r[j]
-                k+=1
-                j+=1
-        return count
-  
+                count += len(l) - i
+                j += 1
+            else:
+                arr[k] = l[i]
+                i += 1
+            k +=1
+        while i < len(l):
+            arr[k] = l[i]
+            k+=1
+            i+=1
+        while j < len(r):
+            arr[k] = r[j]
+            k+=1
+            j+=1
+    return count
+    
