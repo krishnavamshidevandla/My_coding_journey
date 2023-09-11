@@ -53,4 +53,4 @@ def inversionCount(arr, N):
             k+=1
             j+=1
     return count
-print(inversionCount([2, 4, 1, 3, 5], 5)
+print(inversionCount([2, 4, 1, 3, 5], 5))
