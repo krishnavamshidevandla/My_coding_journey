@@ -34,8 +34,7 @@ def inversionCount(arr, n):
         l = arr[:m]
         r = arr[m:]
         count += inversionCount(l, len(l))
-        count += inversionCount(r, len(r))
-        
+        count += inversionCount(r, len(r))  
         i=j=k=0
         while (i <len(l) and j < len(r)):
             if l[i] > r[j]:
