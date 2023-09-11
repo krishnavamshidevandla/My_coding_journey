@@ -31,7 +31,7 @@ same.
 """
 ## Solution ##
 
-def search(A, l, h, n):
+def search(A, l, h, key):
   while l <= h:
       mid = (l+h)//2
       if A[mid] == key:
